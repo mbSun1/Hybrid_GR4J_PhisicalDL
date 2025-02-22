@@ -12,7 +12,7 @@ def train_model(model, train_loader, test_loader, criterion, epochs, optimizer, 
     def train(model, train_loader, criterion, optimizer, scheduler, constraints, model_type,clip):
         model.train()
         total_loss = 0.0
-        total_daily_nse = 0.0
+        total_daily_nse = 0.00
         hidden = None
         for input, target in train_loader:
             if model_type in ['hybrid-J', 'hybrid-Z', 'physical']:
