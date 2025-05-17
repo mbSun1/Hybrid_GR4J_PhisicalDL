@@ -1,7 +1,7 @@
 # Hybrid Hydrological Model Pseudocode for Runoff Simulation
 
 ## Model Objective
-Simulate daily runoff {Q̂ₜ} from meteorological inputs {Pₜ, Tₜ, Dₜ}, combining physical modeling (PBM-RNN) with neural network correction (Conv1D).
+Simulate daily runoff {Q̂ₜ} from meteorological inputs {Pₜ, Tₜ, Dₜ,...}, combining physical modeling (PBM-RNN) with neural network correction (Conv1D).
 
 ---
 
@@ -41,7 +41,7 @@ Simulate daily runoff {Q̂ₜ} from meteorological inputs {Pₜ, Tₜ, Dₜ}, co
 
 ---
 
-## Stage 2: Physical Modeling & Routing (PBM-RNN + Unit Hydrograph)
+## Stage 2: Physical Modeling & Routing (PBM-RNN)
 
 For t = 1 to T:
 
@@ -85,7 +85,7 @@ For t = 1 to T:
 ## Stage 3: Neural Network Correction (ConvNet)
 
 1. Build input:
-   - CNN_inputₜ = [Pₜ, Tₜ, PETₜ, Q_physₜ]
+   - CNN_inputₜ = [Pₜ, Tₜ, PETₜ,...,Q_physₜ]
 
 2. ConvNet structure:
    - Q̂ₜ = ELU(W₂ · ELU(W₁ · xₜ + b₁) + b₂)
