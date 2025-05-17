@@ -13,9 +13,9 @@ MODEL_CONFIG = {
 DATASET_CONFIG = {
     'basin_id': '14306500',  # Basin ID
     'training_start': '1980-01-01',  # Training set start time
-    'training_end': '2000-12-31',    # Training set end time
-    'testing_start': '2001-01-01',   # Testing set start time
-    'testing_end': '2014-12-31',     # Testing set end time
+    'training_end': '2003-12-31',    # Training set end time
+    'testing_start': '2004-01-01',   # Testing set start time
+    'testing_end': '2009-12-31',     # Testing set end time
     'wrap_length': 2190,  # Data wrapping length, recommended to be no less than 5 years (1825 days)
 }
 
